@@ -1,0 +1,122 @@
+.page-header {
+  height: 230px;
+  background-image: url(../images/header-home@2x.jpg);
+  background-size: cover;
+}
+
+.page-header__nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header__logo {
+  display: inline-flex;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-decoration: none;
+}
+
+.button-home {
+  height: 30px;
+  width: 80px;
+  margin-top: 40px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: getColor('header-text');
+
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  text-decoration: underline getColor('accent') 3px;
+}
+
+.button-library {
+  height: 30px;
+  width: 100px;
+  margin-top: 40px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: getColor('header-text');
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.text-logo {
+  color: getColor('header-text');
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+
+  min-width: 280px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: getColor('header-text');
+}
+
+.our-library {
+  display: flex;
+  justify-content: center;
+}
+
+.our-library__btn {
+  width: 135px;
+  height: 45px;
+  margin-bottom: 65px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: getColor('header-text');
+
+  background: transparent;
+  border: 1px solid getColor('header-text');
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+// .box {
+//   width: auto;
+//   height: 230px;
+//   background-image: url('../images/header-home.jpg');
+//   background-size: cover;
+// }
+// @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+//   .box {
+//     background-image: url('../images/header-home@2x.jpg');
+//   }
+// }
