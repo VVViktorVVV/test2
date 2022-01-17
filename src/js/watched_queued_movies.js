@@ -11,7 +11,7 @@ const Queued = [];
 async function fetchMovies() {
    const response = await fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=3c97a1babd597f31c1fa5b3567357dfb`)
     const data = await response.json();
-    // console.log(data.results)
+    console.log(data.results)
        dataDiv.insertAdjacentHTML('afterbegin', moviesRender(data.results));
    
     // getClickedElem()
