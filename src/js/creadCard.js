@@ -1,4 +1,4 @@
-import cardRender from "../hbs/cardRender.hbs";
+import cardRender from "../hbs/render.hbs";
 const axios = require('axios');
 
 const list = document.querySelector(".section-movies__set");
@@ -11,6 +11,7 @@ async function fetchTopMovies() {
       const response = await axios.get('https://api.themoviedb.org/3/trending/movie/day?api_key=2cf91cf1fed5026ae9524dc97ad33068',);
       console.log(response.data.results)
       renderMoviesSet(response.data.results);
+      fetchMoviesGeners();
       return response.data.results;
     }
     
@@ -25,3 +26,23 @@ window.addEventListener('load', fetchTopMovies);
 function renderMoviesSet(array) {
     return list.insertAdjacentHTML('beforeend', cardRender(array))
 }
+
+// https://api.themoviedb.org/3/genre/movie/list?api_key=2cf91cf1fed5026ae9524dc97ad33068'
+
+async function fetchMoviesGeners() {
+    try {
+             
+      const response = await axios.get('https://api.themoviedb.org/3/genre/movie/list?api_key=2cf91cf1fed5026ae9524dc97ad33068');
+      console.log(response.data)
+      
+      return response;
+    }
+    
+    catch (error) {
+      console.error(error);
+  }
+}
+
+// function onMovieGeners(array) {
+//   const geners = 
+// }
